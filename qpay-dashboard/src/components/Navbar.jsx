@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import profileImg from "../assets/profile.png";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 
 
@@ -13,20 +14,25 @@ export const Navbar = () => {
             <nav className="flex justify-between items-center bg-white md:px-20 px-3 py-3 shadow-md">
                 {/* Logo */}
                 <div className='flex items-center'>
-                    <img
-                        src={logo}
-                        alt="logo"
-                        className="object-cover"
-                    />
+                    <Link to="/">
+                        <img
+                            src={logo}
+                            alt="logo"
+                            className="object-cover cursor-pointer"
+                        />
+                    </Link>
                 </div>
 
                 {/* Profile */}
                 <div className="flex items-center space-x-3 cursor-pointer relative">
+
                     <img
                         src={profileImg}
                         alt="Profile"
-                        className=" object-cover"
+                        className="object-cover"
                     />
+
+
                     <div className="text-left hidden md:block lg:block">
                         <p className="text-sm text-gray-500">Hello</p>
                         <p className="font-semibold text-gray-800">Thomas Shelby</p>
