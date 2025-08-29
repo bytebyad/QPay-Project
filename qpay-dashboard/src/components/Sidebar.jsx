@@ -117,7 +117,7 @@ export const Sidebar = () => {
             </div>
 
             {/* Mobile Navbar */}
-            <div className="md:hidden  items-center justify-between bg-primary text-white p-2">
+            <div className="md:hidden  items-center justify-between bg-primary text-white p-2 h-screen">
                 {mobileOpen ? (
                     <X size={28} onClick={() => setMobileOpen(false)} className="cursor-pointer" />
                 ) : (

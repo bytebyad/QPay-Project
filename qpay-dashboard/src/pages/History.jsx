@@ -161,20 +161,20 @@ export const History = () => {
             )}
 
             {/* Table */}
-            <div className="overflow-x-auto rounded-xl border shadow-sm w-full">
-                <table className="min-w-full text-xs sm:text-sm lg:text-base text-gray-700">
-                    <thead className="bg-gray-100 text-gray-600 text-left">
+            <div className=" rounded-xl border shadow-sm w-full overflow-x-auto">
+                <table className="table-fixed w-full text-xs sm:text-sm lg:text-base text-gray-700">
+                    <thead className="bg-gray-100 text-gray-600 text-left w-full">
                         <tr>
-                            <th className="p-3">Transaction ID</th>
-                            <th className="p-3">Amount</th>
-                            <th className="p-3">Wallet</th>
-                            <th className="p-3">Action</th>
-                            <th className="p-3">Status</th>
-                            <th className="p-3">Created Date</th>
-                            <th className="p-3">Details</th>
+                            <th className="p-3 truncate">Transaction ID</th>
+                            <th className="p-3 truncate">Amount</th>
+                            <th className="p-3 truncate">Wallet</th>
+                            <th className="p-3 truncate">Action</th>
+                            <th className="p-3 truncate">Status</th>
+                            <th className="p-3 truncate">Created Date</th>
+                            <th className="p-3 truncate">Details</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className=" ">
                         {loading ? (
                             <tr>
                                 <td colSpan="7" className="text-center p-6">
@@ -184,14 +184,14 @@ export const History = () => {
                         ) : paginatedTransactions.length > 0 ? (
                             paginatedTransactions.map((tx, idx) => (
                                 <tr key={idx} className="border-t hover:bg-gray-50 transition">
-                                    <td className="p-3 break-all max-w-[120px] sm:max-w-none">{tx.transaction_id}</td>
+                                    <td className="p-3 break-all max-w-[120px] sm:max-w-none truncate">{tx.transaction_id}</td>
                                     <td className="p-3 font-medium">₹{tx.amount || "0"}</td>
                                     <td className="p-3 flex items-center gap-2">
                                         {tx.wallet?.image && (
                                             <img
                                                 src={tx.wallet.image}
                                                 alt={tx.wallet?.name || "wallet"}
-                                                className="w-6 h-6 rounded-full"
+                                                className="w-6 h-6 rounded-full "
                                             />
                                         )}
                                         <span className="truncate max-w-[100px] sm:max-w-none">
@@ -199,9 +199,9 @@ export const History = () => {
                                         </span>
                                     </td>
                                     <td className="p-3">{tx.service_action_type}</td>
-                                    <td className="p-3">
+                                    <td className="p-3 truncate">
                                         <span
-                                            className={`px-2 py-1 rounded-full text-[10px] sm:text-xs font-medium
+                                            className={`px-2 py-1 rounded-full text-[10px] sm:text-xs font-medium 
                           ${tx.status === "SUCCESS"
                                                     ? "bg-green-100 text-green-700"
                                                     : tx.status === "FAILED"
@@ -211,7 +211,7 @@ export const History = () => {
                                             {tx.status}
                                         </span>
                                     </td>
-                                    <td className="p-3 whitespace-nowrap">
+                                    <td className="p-3 whitespace-nowrap truncate">
                                         {tx.created_date
                                             ? new Date(tx.created_date).toLocaleString("en-IN", {
                                                 day: "2-digit",
