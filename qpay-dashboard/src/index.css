@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    /* regular */
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+    /* extra bold */
+}
+
+.font-semiboldness {
+    font-weight: 400;
+}
+
+.font-extraboldness {
+    font-weight: 900;
+}
+
+.homeImage {
+    position: relative;
+    top: 1em;
+    height: 12em;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .homeimage {
+        position: relative;
+        left: 3em;
+    }
+}
