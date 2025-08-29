@@ -42,11 +42,12 @@ export const Navbar = () => {
 
                     {/* Dropdown Menu */}
                     {isOpen && (
-                        <div className="absolute top-14 right-0 w-40 bg-white shadow-lg rounded-md py-2 border border-gray-200 z-1000">
+                        <div className="absolute top-14 right-0 w-40 bg-white shadow-lg rounded-md py-2 border border-gray-200 z-50">
                             <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Profile</p>
                             <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Settings</p>
                             <p className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Logout</p>
                         </div>
+
                     )}
                 </div>
             </nav>

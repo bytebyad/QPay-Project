@@ -2,6 +2,7 @@ import React from 'react'
 import homeImage from "../assets/bill-payment.png";
 import QRScann from "../assets/QR-Scann.jpg";
 import '../index.css'
+import { Link } from "react-router-dom";
 
 export const Home = () => {
     const data = [
@@ -167,8 +168,13 @@ export const Home = () => {
 
                         {/* Button */}
                         <button className="w-full bg-primary hover:bg-green-800 text-white font-medium py-2 sm:py-3 rounded-xl shadow">
-                            View More
+                            <Link
+                                to='/qr'>
+                                View More
+                            </Link>
                         </button>
+
+
                     </div>
                 </div>
 
@@ -204,7 +210,12 @@ export const Home = () => {
 
                         {/* Button */}
                         <button className="mt-4 w-full bg-primary hover:bg-green-800 text-white font-medium py-3 rounded-xl shadow">
-                            Settle Now
+
+                            <Link
+                                to='/history'>
+                                Settle Now
+                            </Link>
+
                         </button>
                     </div>
 
