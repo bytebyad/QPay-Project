@@ -23,7 +23,7 @@ export const ProfilePage = () => {
     return (
         <>
 
-            <div className="space-y-6 bg-white overflow-auto max-h-screen p-2 md:p-0 lg:p-2">
+            <div className="space-y-6 bg-white overflow-auto max-h-screen p-2 md:p-0 lg:p-2 hide-scrollbar">
                 {/* Top Banner */}
                 <div
                     className={`
